@@ -1,8 +1,13 @@
 #include <iostream>
+#include "LinkedList.h"
 
 using namespace std;
 
 int main() {
-    cout << "Hello, World!" << endl;
+
+    LinkedList list;
+    list.makeListWithCycle();
+    list.printListWithCycle();
+    cout << list.detectCycleSet() << endl;
     return 0;
 }

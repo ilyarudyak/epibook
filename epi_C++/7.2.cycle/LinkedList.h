@@ -15,6 +15,9 @@ public:
 class LinkedList {
 
 public:
+
+    const int kNumberOfNodes = 5;
+
     LinkedList() : head(nullptr) { }
 
     int isEmpty() {
@@ -22,6 +25,13 @@ public:
     }
     void addToHead(int);
     void printList() const;
+
+    // detect cycle
+    void makeListWithCycle();
+    void printListWithCycle();
+    bool detectCycleSet();
+    bool detectCycleFloyd();
+
 
 
 private:
