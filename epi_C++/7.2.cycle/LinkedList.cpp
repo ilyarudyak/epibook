@@ -70,6 +70,17 @@ bool LinkedList::detectCycleSet() {
 }
 
 bool LinkedList::detectCycleFloyd() {
+    Node *fast = head;
+    Node *slow = head;
+    while (true) {
+        if (fast == slow) { return true; }
+
+        if (slow == nullptr) { break; }
+        else { slow = slow->next; }
+
+        if (fast == nullptr || fast->next == nullptr) { break ; }
+        else { fast = fast->next->next; }
+    }
     return false;
 }
 
