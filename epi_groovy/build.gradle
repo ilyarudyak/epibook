@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.10'
+
+}
+
+task runScript (dependsOn: 'classes', type: JavaExec) {
+    main = 'Palindrome'
+    classpath = sourceSets.main.runtimeClasspath
+}

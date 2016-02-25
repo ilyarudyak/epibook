@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.gradle.PersonTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-07-17T10:34:24" hostname="Ilyas-MacBook-Pro.local" time="0.457">
+  <properties/>
+  <testcase name="canConstructAPerson" classname="org.gradle.PersonTest" time="0.431"/>
+  <testcase name="testResourcesAreAvailable" classname="org.gradle.PersonTest" time="0.003"/>
+  <testcase name="usingCorrectVersionOfGroovy" classname="org.gradle.PersonTest" time="0.003"/>
+  <testcase name="canConstructAPersonUsingName" classname="org.gradle.PersonTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
