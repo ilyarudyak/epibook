@@ -1,5 +1,5 @@
 #include <iostream>
-#include "7.1.merge/LinkedList.h"
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -17,8 +17,6 @@ int main() {
     l.printList();
     m.printList();
 
-    l.merge(m);
-    l.printList();
 
     return 0;
 }
