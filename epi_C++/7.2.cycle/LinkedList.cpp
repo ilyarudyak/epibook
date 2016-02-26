@@ -84,5 +84,14 @@ bool LinkedList::detectCycleFloyd() {
     return false;
 }
 
+int LinkedList::findMedian() {
+    Node *slow = head;
+    Node *fast = head;
 
+    while (fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
 
+    return slow->data;
+}

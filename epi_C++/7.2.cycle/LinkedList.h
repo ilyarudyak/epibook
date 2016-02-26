@@ -32,6 +32,9 @@ public:
     bool detectCycleSet();
     bool detectCycleFloyd();
 
+    // find median: we consider odd number of nodes
+    // when fast pointer points to tail slow points to median
+    int findMedian();
 
 
 private:
