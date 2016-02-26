@@ -76,17 +76,14 @@ void CircularList::printList() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int CircularList::findMedian() {
+    Node *slow = cursor;
+    Node *fast = cursor;
+    while (fast->next != cursor) {
+        slow = slow->next;
+        fast = fast->next->next;
+//        cout << "slow=" << slow->data << "fast="
+//             << fast->data << endl;
+    }
+    return slow->data;
+}

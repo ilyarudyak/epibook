@@ -30,6 +30,10 @@ public:
     void removeAfterCursor();           // remove after cursor
     void printList();                   // print list
 
+    // we consider simplest case
+    // when we have odd number of nodes
+    int findMedian();
+
 private:
     Node *cursor;
 };
