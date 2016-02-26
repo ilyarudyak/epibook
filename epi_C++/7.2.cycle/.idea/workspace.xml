@@ -11,12 +11,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eabbdd2a-50b8-4272-bbab-cd5b604ecece" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.cpp" afterPath="$PROJECT_DIR$/LinkedList.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.h" afterPath="$PROJECT_DIR$/LinkedList.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-    </list>
+    <list default="true" id="eabbdd2a-50b8-4272-bbab-cd5b604ecece" name="Default" comment="" />
     <ignored path="7.2.cycle.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
