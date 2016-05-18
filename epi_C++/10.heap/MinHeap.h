@@ -74,10 +74,14 @@ public:
      * Throws UnderflowException if empty.
      */
     void deleteMin() {
-        if (isEmpty())
+        if (isEmpty()) {
             throw UnderflowException{};
+        }
 
-        array[1] = std::move(array[currentSize--]);
+        swap(array[1], array[currentSize]);
+        currentSize--;
+
+//        array[1] = std::move(array[currentSize--]);
         percolateDown(1);
     }
 
@@ -113,21 +117,43 @@ private:
      * Internal method to percolate down in the heap.
      * hole is the index at which the percolate begins.
      */
-    void percolateDown(int hole) {
-        int child;
-        T tmp = std::move(array[hole]);
+    void percolateDown(int k) {
 
-        for (; hole * 2 <= currentSize; hole = child) {
-            child = hole * 2;
-            if (child != currentSize && array[child + 1] < array[child])
-                ++child;
-            if (array[child] < tmp)
-                array[hole] = std::move(array[child]);
-            else
+        while (2 * k <= currentSize) {
+            int i;
+            if (array[k] > array[2 * k] ||
+                (2 * k + 1 <= currentSize && array[k] < array[2 * k + 1])) {
+
+                if (2 * k + 1 <= currentSize) {
+                    array[2 * k] < array[2 * k + 1] ? (i = 2 * k) : (i = 2 * k +
+                                                                         1);
+                } else {
+                    i = 2 * k;
+                }
+
+                swap(array[k], array[i]);
+                k = i;
+            } else {
                 break;
+            }
         }
-        array[hole] = std::move(tmp);
     }
+
+
+//        int child;
+//        T tmp = std::move(array[hole]);
+//
+//        for (; hole * 2 <= currentSize; hole = child) {
+//            child = hole * 2;
+//            if (child != currentSize && array[child + 1] < array[child])
+//                ++child;
+//            if (array[child] < tmp)
+//                array[hole] = std::move(array[child]);
+//            else
+//                break;
+//        }
+//        array[hole] = std::move(tmp);
+//    }
 };
 
 #endif //INC_10_HEAP_BINARYHEAP_H

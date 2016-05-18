@@ -41,19 +41,19 @@ int main() {
     // check heap implementation
     MinHeap<int> heap;
     heap.insert(1); heap.insert(2); heap.insert(3);
-    cout << "min=" << heap.findMin() << endl;
+    cout << "exp=1 " << "min=" << heap.findMin() << endl;
 
     heap.insert(4); heap.insert(5); heap.insert(0);
-    cout << "min=" << heap.findMin() << endl;
+    cout << "exp=0 " << "min=" << heap.findMin() << endl;
 
     heap.deleteMin();
-    cout << "min=" << heap.findMin() << endl;
+    cout << "exp=1 " << "min=" << heap.findMin() << endl;
 
     heap.deleteMin();
-    cout << "min=" << heap.findMin() << endl;
+    cout << "exp=2 " << "min=" << heap.findMin() << endl;
 
     heap.insert(0);
-    cout << "min=" << heap.findMin() << endl;
+    cout << "exp=0 " << "min=" << heap.findMin() << endl;
 
     return 0;
 }
