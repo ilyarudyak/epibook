@@ -10,14 +10,14 @@
 using namespace std;
 
 template<typename T>
-class BinaryHeap {
+class MinHeap {
 
 public:
-    explicit BinaryHeap(int capacity = 100)
-            : array(capacity + 1), currentSize{0} {
+    explicit MinHeap(int capacity = 100)
+            : array((unsigned long) (capacity + 1)), currentSize{0} {
     }
 
-    explicit BinaryHeap(const vector <T> &items)
+    explicit MinHeap(const vector <T> &items)
             : array(items.size() + 10), currentSize{items.size()} {
         for (int i = 0; i < items.size(); ++i)
             array[i + 1] = items[i];
@@ -40,17 +40,18 @@ public:
      * Insert item x, allowing duplicates.
      */
     void insert(const T &x) {
-        if (currentSize == array.size() - 1)
+
+        if (currentSize == array.size() - 1) {
             array.resize(array.size() * 2);
+        }
 
-        // Percolate up
-        int hole = ++currentSize;
-        T copy = x;
-
-        array[0] = std::move(copy);
-        for (; x < array[hole / 2]; hole /= 2)
-            array[hole] = std::move(array[hole / 2]);
-        array[hole] = std::move(array[0]);
+        currentSize++;
+        array[currentSize] = x;
+        int index = currentSize;
+        while (index != 1 && array[index / 2] > array[index]) {
+            swap(array[index/2], array[index]);
+            index = index / 2;
+        }
     }
 
 

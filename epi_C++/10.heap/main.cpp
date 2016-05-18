@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include "BinaryHeap.h"
+#include "MinHeap.h"
 #include "FileMerger.h"
 #include "StackWithHeap.h"
 #include "ClosestStars.h"
@@ -11,13 +11,13 @@ using namespace std;
 int main() {
 
     // 10.4 find k closest stars
-    vector<pair<int, int>> stars = {
-            make_pair(1, 5), make_pair(2, 10), make_pair(3, 15),
-            make_pair(4, 20), make_pair(5, 25), make_pair(6, 30),
-            make_pair(7, 35), make_pair(8, 40), make_pair(9, 45)
-    };
-    ClosestStars cs(stars, 5);
-    cs.findClosest();
+//    vector<pair<int, int>> stars = {
+//            make_pair(1, 5), make_pair(2, 10), make_pair(3, 15),
+//            make_pair(4, 20), make_pair(5, 25), make_pair(6, 30),
+//            make_pair(7, 35), make_pair(8, 40), make_pair(9, 45)
+//    };
+//    ClosestStars cs(stars, 5);
+//    cs.findClosest();
 
 
     // 10.3 implement stack with heap
@@ -39,15 +39,34 @@ int main() {
 
 
     // check heap implementation
-//    BinaryHeap<int> heap;
-//    heap.insert(1); heap.insert(2); heap.insert(3);
-//    cout << "min=" << heap.findMin() << endl;
-//
-//    heap.insert(4); heap.insert(5); heap.insert(0);
-//    cout << "min=" << heap.findMin() << endl;
-//
-//    heap.deleteMin();
-//    cout << "min=" << heap.findMin() << endl;
+    MinHeap<int> heap;
+    heap.insert(1); heap.insert(2); heap.insert(3);
+    cout << "min=" << heap.findMin() << endl;
+
+    heap.insert(4); heap.insert(5); heap.insert(0);
+    cout << "min=" << heap.findMin() << endl;
+
+    heap.deleteMin();
+    cout << "min=" << heap.findMin() << endl;
+
+    heap.deleteMin();
+    cout << "min=" << heap.findMin() << endl;
+
+    heap.insert(0);
+    cout << "min=" << heap.findMin() << endl;
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

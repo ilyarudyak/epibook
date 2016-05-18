@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ClosestStars.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StackWithHeap.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/BinaryHeap.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MinHeap.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
