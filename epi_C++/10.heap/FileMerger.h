@@ -10,7 +10,7 @@
 #include <utility>
 using namespace std;
 
-class Compare {
+class CompareInverse {
 public:
     const bool operator()(  const pair<int, int>&lhs,
                             const pair<int, int>&rhs) const {
@@ -54,7 +54,7 @@ public:
 private:
     vector<vector<pair<int,int>>> vectors;
     vector<int> indicies;
-    priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> minHeap;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, CompareInverse> minHeap;
     void initialFill() {
         for (int i = 0; i < vectors.size(); ++i) {
             minHeap.push(vectors[i][0]);
