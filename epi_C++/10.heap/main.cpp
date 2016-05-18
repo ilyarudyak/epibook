@@ -1,8 +1,34 @@
 #include <iostream>
-
+#include <vector>
+#include "BinaryHeap.h"
+#include "FileMerger.h"
 using namespace std;
 
+
 int main() {
-    cout << "Hello, World!" << endl;
+
+    BinaryHeap<int> heap;
+
+    // 10.1 merging sorted files
+    vector<vector<pair<int, int>>> vectors = {
+            {make_pair(57, 0), make_pair(131, 0), make_pair(493, 0)},
+            {make_pair(221, 1), make_pair(294, 1)},
+            {make_pair(339, 2), make_pair(418, 2), make_pair(452, 2)},
+            {make_pair(190, 3), make_pair(442, 3)}
+    };
+    FileMerger fm(vectors);
+    fm.mergeVectors();
+
+
+    // check heap implementation
+//    heap.insert(1); heap.insert(2); heap.insert(3);
+//    cout << "min=" << heap.findMin() << endl;
+//
+//    heap.insert(4); heap.insert(5); heap.insert(0);
+//    cout << "min=" << heap.findMin() << endl;
+//
+//    heap.deleteMin();
+//    cout << "min=" << heap.findMin() << endl;
+
     return 0;
 }
