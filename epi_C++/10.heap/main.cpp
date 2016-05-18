@@ -4,16 +4,27 @@
 #include "BinaryHeap.h"
 #include "FileMerger.h"
 #include "StackWithHeap.h"
+#include "ClosestStars.h"
 using namespace std;
 
 
 int main() {
 
+    // 10.4 find k closest stars
+    vector<pair<int, int>> stars = {
+            make_pair(1, 5), make_pair(2, 10), make_pair(3, 15),
+            make_pair(4, 20), make_pair(5, 25), make_pair(6, 30),
+            make_pair(7, 35), make_pair(8, 40), make_pair(9, 45)
+    };
+    ClosestStars cs(stars, 5);
+    cs.findClosest();
+
+
     // 10.3 implement stack with heap
-    StackWithHeap<int> stack;
-    stack.push(3); stack.push(5); stack.push(2);
-    stack.push(4); stack.push(1);
-    stack.show();
+//    StackWithHeap<int> stack;
+//    stack.push(3); stack.push(5); stack.push(2);
+//    stack.push(4); stack.push(1);
+//    stack.show();
 
 
     // 10.1 merging sorted files
