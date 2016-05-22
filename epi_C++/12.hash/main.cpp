@@ -6,14 +6,20 @@
 #include "Anagrams.h"
 #include "Palindrome.h"
 #include "LetterFreq.h"
+#include "Plagiarism.h"
 
 int main() {
 
+    // 12.13 plagiarism detector
+    fstream in("plagiarism.txt");
+    Plagiarism plagiarism(in, 3);
+    plagiarism.checkPlagiarism();
+
     // 12.9 letter and magazine
-    fstream lin("letter.txt");
-    fstream min("magazine.txt");
-    LetterFreq lf(lin);
-    cout << lf.isSufficient(min) << endl;
+//    fstream lin("letter.txt");
+//    fstream min("magazine.txt");
+//    LetterFreq lf(lin);
+//    cout << lf.isSufficient(min) << endl;
 
     // 12.8 palindrome
 //    string word = "edifiedx";
