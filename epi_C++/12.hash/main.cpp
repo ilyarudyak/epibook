@@ -5,13 +5,20 @@
 #include "PairUsers.h"
 #include "Anagrams.h"
 #include "Palindrome.h"
+#include "LetterFreq.h"
 
 int main() {
 
+    // 12.9 letter and magazine
+    fstream lin("letter.txt");
+    fstream min("magazine.txt");
+    LetterFreq lf(lin);
+    cout << lf.isSufficient(min) << endl;
+
     // 12.8 palindrome
-    string word = "edifiedx";
-    Palindrome p(word);
-    cout << p.isPermToPalindrome() << endl;
+//    string word = "edifiedx";
+//    Palindrome p(word);
+//    cout << p.isPermToPalindrome() << endl;
 
     // 12.7 anagrams
 //    fstream in("words");
