@@ -4,12 +4,18 @@
 #include <boost/algorithm/string/join.hpp>
 #include "PairUsers.h"
 #include "Anagrams.h"
+#include "Palindrome.h"
 
 int main() {
 
+    // 12.8 palindrome
+    string word = "edifiedx";
+    Palindrome p(word);
+    cout << p.isPermToPalindrome() << endl;
+
     // 12.7 anagrams
-    fstream in("words");
-    Anagram anagram(in);
+//    fstream in("words");
+//    Anagram anagram(in);
 
 
     // 12.5 pair users by attributes
