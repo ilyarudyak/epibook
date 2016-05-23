@@ -24,7 +24,6 @@ public:
         }
 
     }
-
     bool checkPlagiarism() {
         for (auto textPair : textMap) {
             set<string> words = textPair.second;
@@ -39,18 +38,14 @@ public:
         }
     }
 
-
 private:
     int k;
     map<string, set<string>> textMap;
     void addToMap(const string &word) {
-//        cout << "word: " << word << " ";
         for (int i = 0; i < word.size() - k + 1; ++i) {
             string ksubstr = word.substr((unsigned long) i, (unsigned long) k);
-//            cout << ksubstr << " ";
             textMap[ksubstr].insert(word);
         }
-//        cout << endl;
     }
 
 };

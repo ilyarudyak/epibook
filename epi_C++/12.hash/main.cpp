@@ -7,13 +7,21 @@
 #include "Palindrome.h"
 #include "LetterFreq.h"
 #include "Plagiarism.h"
+#include "ISBNCache.h"
 
 int main() {
 
+    //12.16 ISBN Cache
+    fstream in("books.txt");
+    ISBNCache cache(in, 2);
+    cache.getPrice("123");
+    cache.getPrice("124");
+    cache.getPrice("123");
+
     // 12.13 plagiarism detector
-    fstream in("plagiarism.txt");
-    Plagiarism plagiarism(in, 3);
-    plagiarism.checkPlagiarism();
+//    fstream in("plagiarism.txt");
+//    Plagiarism plagiarism(in, 3);
+//    plagiarism.checkPlagiarism();
 
     // 12.9 letter and magazine
 //    fstream lin("letter.txt");
